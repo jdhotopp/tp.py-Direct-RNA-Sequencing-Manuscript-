@@ -1647,7 +1647,7 @@ end
 
 ## Figure 6F
 
-### Pull FASTQ files for ONT reads from SRA
+### Pull FASTQ files for _Brugia malayi_ ONT reads from SRA
 
 `fasterq-dump SRR23886071`
 
@@ -1663,7 +1663,7 @@ end
 
 `samtools idxstats SRR23886071.bam > SRR23886071.transcripts.idxstats`
 
-### Pull FASTQ files for Illumina reads from SRA
+### Pull FASTQ files for _Brugia malayi_ Illumina reads from SRA
 
 `fasterq-dump SRR3111494`
 
