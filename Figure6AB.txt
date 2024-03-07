@@ -1,0 +1,98 @@
+# ---
+# title: "Script to generate a plot of the number of reads greater than the operon length"
+# ---
+
+# Dependancies
+library(ggplot2)
+
+# Input files -- edit paths for local use
+MinIONBedFile<-"merged_all_wo_rRNA.readtable.bed"
+Ecocyc_operon_file<-"3718-Transcription-Units-from-a-list.txt"
+
+# Function to determine if two ranges overlap
+check_overlap <- function(range1_start, range1_end, range2_start, range2_end) {
+  return(range1_start <= range2_end && range1_end >= range2_start)
+}
+
+# Preprocessing of the Ecocyc dataset and the MinION BED file
+MinIONBed<-read.table(MinIONBedFile,sep = "\t")
+colnames(MinIONBed)<-c("Chromosome","Start","End","ReadName","Unknown","Strand")
+Ecocyc_operon<-read.table(Ecocyc_operon_file,sep = "\t",header = T)
+Ecocyc_operon$Start<-as.numeric(gsub(",","",gsub("\\[.* ","",gsub(" &.*","",Ecocyc_operon$Sequence...coordinates.of.DNA.region))))
+Ecocyc_operon$End<-as.numeric(gsub(",","",gsub("]","",gsub(".*; ","",Ecocyc_operon$Sequence...coordinates.of.DNA.region))))
+Ecocyc_operon$Orientation<-"+"
+Ecocyc_operon[grep("larr",Ecocyc_operon$Sequence...coordinates.of.DNA.region),]$Orientation<-"-"
+Ecocyc_operon$Length<-Ecocyc_operon$End-Ecocyc_operon$Start
+MinIONBed$Length<-MinIONBed$End-MinIONBed$Start
+
+# Loop to generate the data for all Ecocyc Transcriptional Units
+PlottingFrame<-data.frame()
+PercentFrame<-data.frame()
+
+for (x in 1:length(Ecocyc_operon$Transcription.Units)) {
+  strandedMinIONBed<-MinIONBed[MinIONBed$Strand == Ecocyc_operon[x,]$Orientation,]
+  overlapMinIONBed<-strandedMinIONBed[strandedMinIONBed$Start <= Ecocyc_operon[x,]$End,]
+  overlapMinIONBed<-overlapMinIONBed[overlapMinIONBed$End >= Ecocyc_operon[x,]$Start,]
+  
+  subPercentFrame<-data.frame(length(overlapMinIONBed$Chromosome),length(overlapMinIONBed[overlapMinIONBed$Length > Ecocyc_operon[x,]$Length,]$Chromosome))
+  colnames(subPercentFrame)<-c("TotalReads","LongerReads")
+  PercentFrame<-rbind(PercentFrame,subPercentFrame)
+  
+  if(length(overlapMinIONBed[overlapMinIONBed$Length > Ecocyc_operon[x,]$Length,]$Chromosome) > 0){
+    subPlottingFrame<-data.frame(overlapMinIONBed[overlapMinIONBed$Length > Ecocyc_operon[x,]$Length,]$Length, Ecocyc_operon[x,]$Length)
+    colnames(subPlottingFrame)<-c("ReadLength","OperonLength")
+    PlottingFrame<-rbind(PlottingFrame,subPlottingFrame)
+    
+  }
+}
+
+# Summary Statistics
+print(paste(sum(PercentFrame$LongerReads)," reads (",100*sum(PercentFrame$LongerReads/sum(PercentFrame$TotalReads)),"%) are longer than the operon to which they map",sep=""))
+
+# Plotting all read lengths longer than the mapped Transcriptional Unit
+PlottingFrame$ReadLength<-PlottingFrame$ReadLength/1000
+PlottingFrame$OperonLength<-PlottingFrame$OperonLength/1000
+pdf(paste(outdir,"OperonLengthPlot.pdf",sep="/"))
+print(ggplot(PlottingFrame, aes(x = OperonLength, y = ReadLength)) + geom_point(size=0.1) + theme_bw() + xlab("Operon Length (kbp)") + ylab("Read Length (kbp)"))
+dev.off()
+
+
+# Loop to generate the data for multigene Ecocyc Transcriptional Units
+PlottingFrame<-data.frame()
+PercentFrame<-data.frame()
+Ecocyc_operon<-Ecocyc_operon[grep("\\/\\/",Ecocyc_operon$Genes.of.transcription.unit),]
+
+for (x in 1:length(Ecocyc_operon$Transcription.Units)) {
+  strandedMinIONBed<-MinIONBed[MinIONBed$Strand == Ecocyc_operon[x,]$Orientation,]
+  overlapMinIONBed<-strandedMinIONBed[strandedMinIONBed$Start <= Ecocyc_operon[x,]$End,]
+  overlapMinIONBed<-overlapMinIONBed[overlapMinIONBed$End >= Ecocyc_operon[x,]$Start,]
+  
+  subPercentFrame<-data.frame(length(overlapMinIONBed$Chromosome),length(overlapMinIONBed[overlapMinIONBed$Length > Ecocyc_operon[x,]$Length,]$Chromosome))
+  colnames(subPercentFrame)<-c("TotalReads","LongerReads")
+  PercentFrame<-rbind(PercentFrame,subPercentFrame)
+  
+  if(length(overlapMinIONBed[overlapMinIONBed$Length > Ecocyc_operon[x,]$Length,]$Chromosome) > 0){
+    subPlottingFrame<-data.frame(overlapMinIONBed[overlapMinIONBed$Length > Ecocyc_operon[x,]$Length,]$Length, Ecocyc_operon[x,]$Length)
+    colnames(subPlottingFrame)<-c("ReadLength","OperonLength")
+    PlottingFrame<-rbind(PlottingFrame,subPlottingFrame)
+    
+  }
+}
+
+# Summary Statistics
+print(paste(sum(PercentFrame$LongerReads)," reads (",100*sum(PercentFrame$LongerReads/sum(PercentFrame$TotalReads)),"%) are longer than the operon to which they map",sep=""))
+
+# Plotting all read lengths longer than the mapped Transcriptional Unit
+PlottingFrame$ReadLength<-PlottingFrame$ReadLength/1000
+PlottingFrame$OperonLength<-PlottingFrame$OperonLength/1000
+pdf("Figure6B.pdf")
+print(ggplot(PlottingFrame, aes(x = OperonLength, y = ReadLength)) + geom_point(size=0.1) + theme_bw() + xlab("Operon Length (kbp)") + ylab("Read Length (kbp)"))
+dev.off()
+
+pdf("Figure6A.pdf")
+hist(Ecocyc_operon$Length, breaks=100, col=rgb(0,0,1,1/10), xlim=c(0,20000), ylim=c(0,0.001), freq=FALSE)
+hist(MinIONBed$Length, breaks=50, col=rgb(1,0,0,1/10), xlim=c(0,20000), ylim=c(0,0.001), freq=FALSE, add=T)
+dev.off()
+
+
+
