@@ -43,6 +43,8 @@ Run in tcsh; includes tcsh specific syntax that won't work in bash
 - [ ] seqkit version 0.7.2
 - [ ] bedops version 2.4.36 (convert2bed)
 - [ ] salmon version 1.10.2
+- [ ] julia version 1.6.1
+- [ ] fadu
 - [ ] Rscript version 3.6.3
 - [ ] bamtools version 2.5.1
 - [ ] stringtie version 1.3.4d
@@ -732,7 +734,17 @@ Salmon detected they were all library type IU, which is unstranded.
 
 `salmon quant -i E2348_salmon_index -l A -1 ERR3932849_1.fastq -2 ERR3932849_2.fastq --validateMappings -o quants/ERR3932849 &`
 
-# Need commands from Chris for running FADU
+`julia fadu.jl -b ERR3932853.bam -g GCF_014117345.2_ASM1411734v2_genomic.gff -o FADU_dir -f CDS -s reverse -a ID`
+
+`julia fadu.jl -b ERR3932854.bam -g GCF_014117345.2_ASM1411734v2_genomic.gff -o FADU_dir -f CDS -s reverse -a ID`
+
+`julia fadu.jl -b ERR3932855.bam -g GCF_014117345.2_ASM1411734v2_genomic.gff -o FADU_dir -f CDS -s reverse -a ID`
+
+`julia fadu.jl -b ERR3932847.bam -g GCF_014117345.2_ASM1411734v2_genomic.gff -o FADU_dir -f CDS -s reverse -a ID`
+
+`julia fadu.jl -b ERR3932848.bam -g GCF_014117345.2_ASM1411734v2_genomic.gff -o FADU_dir -f CDS -s reverse -a ID`
+
+`julia fadu.jl -b ERR3932849.bam -g GCF_014117345.2_ASM1411734v2_genomic.gff -o FADU_dir -f CDS -s reverse -a ID`
 
 `minimap2 -ax map-ont -t 2 E2348_predicted_transcripts.fsa SRR18061003.fastq > SRR18061003.transcripts.bam`
 
@@ -768,7 +780,9 @@ Salmon detected they were all library type IU, which is unstranded.
 
 `RScript Figure5H.R`
 
-# Need Chris's script for Figure 5I
+#### Figure 5I
+
+`Rscript Figure 5I.R`
 
 ## _Listeria monoctyogenes_ Scott A (CM001159.1)
 
