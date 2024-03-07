@@ -6,7 +6,7 @@ Run in tcsh; includes tcsh specific syntax that won't work in bash
 
 # Table of Contents
 
-[Download Data](https://github.com/jdhotopp/RDOPERON/blob/main/PUBLIC_COMMANDS.md#download-data)<br />
+[Download Data](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/read_end.r)<br />
 
 [Analysis Methods](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#analysis-methods)<br />
 - [ ] [Minimap2](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#run-minimap2-on-all-fastq-files)<br />
