@@ -44,7 +44,7 @@ Run in tcsh; includes tcsh specific syntax that won't work in bash
 - [ ] bedops version 2.4.36 (convert2bed)
 - [ ] salmon version 1.10.2
 - [ ] julia version 1.6.1
-- [ ] fadu
+- [ ] fadu version 1.9
 - [ ] Rscript version 3.6.3
 - [ ] bamtools version 2.5.1
 - [ ] stringtie version 1.3.4d
