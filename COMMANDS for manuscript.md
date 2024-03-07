@@ -8,30 +8,30 @@ Run in tcsh; includes tcsh specific syntax that won't work in bash
 
 [Download Data](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#download-data)<br />
 
-[Analysis Methods](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#analysis-methods)<br />
-- [ ] [Minimap2](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#run-minimap2-on-all-fastq-files)<br />
-- [ ] [Filter and sort](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#filter-and-sort-bam-file)<br />
-- [ ] [Merge bam files](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#merge-all-bam-files)<br />
-- [ ] [Generate readtable bed file](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#generate-readtable-bed-file)<br />
-- [ ] [Filter on minimum number of reads](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#filtering-on-minimum-number-of-reads-in-this-case-20-reads)<br />
-- [ ] [Stats on regions](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#stats-on-regions-for-table-1)<br />
-- [ ] [Run tp.py](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#run-tppy)<br />
-- [ ] [Counts for transcripts](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#counts-for-transcripts-predicted-for-table-1)<br />
-- [ ] [Stats on transcirpts](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#stats-on-transcripts-for-table-1)<br />
-- [ ] [Merge GFF files and identify UTRs](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#merge-gff-files-and-identify-utrs)<br />
-- [ ] [Stats on merged GFF files](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#stats-on-merged-gff-files-for-table-1)<br />
+[Analysis Methods](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#analysis-methods)<br />
+- [ ] [Minimap2](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#analysis-methods)<br />
+- [ ] [Filter and sort](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#filter-and-sort-bam-file)<br />
+- [ ] [Merge bam files](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#merge-all-bam-files)<br />
+- [ ] [Generate readtable bed file](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#generate-readtable-bed-file)<br />
+- [ ] [Filter on minimum number of reads](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#filtering-on-minimum-number-of-reads-in-this-case-20-reads)<br />
+- [ ] [Stats on regions](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#stats-on-regions-for-table-1)<br />
+- [ ] [Run tp.py](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#run-tppy)<br />
+- [ ] [Counts for transcripts](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#counts-for-transcripts-predicted-for-table-1)<br />
+- [ ] [Stats on transcripts](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#stats-on-transcripts-for-table-1)<br />
+- [ ] [Merge GFF files and identify UTRs](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#merge-gff-files-and-identify-utrs)<br />
+- [ ] [Stats on merged GFF files](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#stats-on-merged-gff-files-for-table-1)<br />
 
-[Organism Specific Results and Commands](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#organism-specific-results-and-commands)<br />
+[Organism Specific Results and Commands](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#organism-specific-results-and-commands)<br />
 
-- [ ] [_E. coli_ K12](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#e-coli-k12-1)<br />
-- [ ] [_E. coli_ E2348/69](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#e-coli-e234869-1)<br />
-- [ ] [_Listeria monocytogenes_ Scott A](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#listeria-monoctyogenes-scott-a-cm0011591)<br />
-- [ ] [_Listeria monocytogenes_ RO15](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#listeria-monocytogenes-ro15-cadehj0000000001-1)<br />
-- [ ] [_Pseudomonas aeruginosa_ SG17M](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#pseudomonas-aeruginosa-sg17m-1)
-- [ ] [_Pseudomonas aeruginosa_ NN2](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#pseudomonas-aeruginosa-nn2-1)<br />
-- [ ] [_Haloferax volcanii_](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#haloferax-volcanii-1)<br />
+- [ ] [_E. coli_ K12](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#e-coli-k12-1)<br />
+- [ ] [_E. coli_ E2348/69](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#e-coli-e234869-1)<br />
+- [ ] [_Listeria monocytogenes_ Scott A](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#listeria-monoctyogenes-scott-a-cm0011591)<br />
+- [ ] [_Listeria monocytogenes_ RO15](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#listeria-monocytogenes-ro15-cadehj0000000001-1)<br />
+- [ ] [_Pseudomonas aeruginosa_ SG17M](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#pseudomonas-aeruginosa-sg17m-1)
+- [ ] [_Pseudomonas aeruginosa_ NN2](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#pseudomonas-aeruginosa-nn2-1)<br />
+- [ ] [_Haloferax volcanii_](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#haloferax-volcanii-1)<br />
 
-[Plotting](https://github.com/jdhotopp/RDOPERON/blob/9e01af349e5f36570785c7d9c85d83116b3f8542/PUBLIC_COMMANDS.md#plotting)<br />
+[Plotting](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#plotting)<br />
 
 # Software and versions used
 
