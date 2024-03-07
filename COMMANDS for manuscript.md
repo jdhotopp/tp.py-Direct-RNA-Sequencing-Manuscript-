@@ -35,21 +35,19 @@ Run in tcsh; includes tcsh specific syntax that won't work in bash
 
 # Software and versions used
 
-```
-minimap2 version 2.24-r1122
-samtools version 1.11 using htslib 1.11
-bedtools version v2.27.1
-perl version v5.30.2
-python3 version 3.6.8, unless otherwise specified as version 3.11.4
-seqkit version 0.7.2
-bedops version 2.4.36 (convert2bed)
-salmon version 1.10.2
-Rscript version 3.6.3
-bamtools version 2.5.1
-stringtie version 1.3.4d
-tama versión_date_2020_12_14
-cupcake (downloaded and installed Nov 9 2022)
-```
+- [ ] minimap2 version 2.24-r1122
+- [ ] samtools version 1.11 using htslib 1.11
+- [ ] bedtools version v2.27.1
+- [ ] perl version v5.30.2
+- [ ] python3 version 3.6.8, unless otherwise specified as version 3.11.4
+- [ ] seqkit version 0.7.2
+- [ ] bedops version 2.4.36 (convert2bed)
+- [ ] salmon version 1.10.2
+- [ ] Rscript version 3.6.3
+- [ ] bamtools version 2.5.1
+- [ ] stringtie version 1.3.4d
+- [ ] tama versión_date_2020_12_14
+- [ ] cupcake (downloaded and installed Nov 9 2022)
 
 # Download Data
 
