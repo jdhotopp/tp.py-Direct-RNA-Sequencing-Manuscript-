@@ -167,7 +167,7 @@ minimap2 -ax map-ont -t 2 "$REF_FILE" "$FASTQ_FILE" > "$SAM_FILE"
 
 ## Run tp.py
 
-### The tp.py alogirthm is publicly available at: https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/blob/main/tp.py in https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/tree/main
+#### The tp.py alogirthm is publicly available at: https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/blob/main/tp.py in https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/tree/main
 
 `python3 tp.py -r merged_all.readtable.bed -d merged_all.readtable_20reads.merged.bed --max_depth=25000 -o transcripts`
 
