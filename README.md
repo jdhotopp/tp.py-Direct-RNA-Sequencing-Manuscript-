@@ -1,1 +1,3 @@
 [![DOI](https://zenodo.org/badge/768810299.svg)](https://zenodo.org/doi/10.5281/zenodo.13684383)
+
+The tip.py alogirthm is publicly available at: https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/blob/main/tp.py
