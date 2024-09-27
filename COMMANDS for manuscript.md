@@ -31,7 +31,7 @@ Run in tcsh; includes tcsh specific syntax that won't work in bash
 - [ ] [_Pseudomonas aeruginosa_ NN2](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#pseudomonas-aeruginosa-nn2-1)<br />
 - [ ] [_Haloferax volcanii_](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#haloferax-volcanii-1)<br />
 
-[Plotting](https://github.com/jdhotopp/tp.py-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#plotting)<br />
+[Plotting](https://github.com/jdhotopp/-Direct-RNA-Sequencing-Manuscript-/blob/main/COMMANDS%20for%20manuscript.md#plotting)<br />
 
 # Software and versions used
 
@@ -167,7 +167,7 @@ minimap2 -ax map-ont -t 2 "$REF_FILE" "$FASTQ_FILE" > "$SAM_FILE"
 
 ## Run tp.py
 
-#### The tp.py alogirthm is publicly available at: https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/blob/main/tp.py in https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/tree/main
+#### The tp.py algorithm is publicly available at: https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/blob/main/tp.py in https://github.com/Dunning-Hotopp-Lab/Direct_RNA_Sequencing/tree/main
 
 `python3 tp.py -r merged_all.readtable.bed -d merged_all.readtable_20reads.merged.bed --max_depth=25000 -o transcripts`
 
